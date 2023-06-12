@@ -22,11 +22,15 @@
         document.getElementById('timetableForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form submission
 
-            // Run the script.js code here
-            // ... (the modified script.js code goes here)
-
-            // Optionally, you can redirect or perform other actions after running the script
-            // window.location.href = 'somepage.html';
+fetch('https://timetable-lookup.p.rapidapi.com/TimeTable/ARN/STN/20230620/?Airline=FR', {
+  headers: {
+    'X-RapidAPI-Key': 'f97e3dbab8mshb83b4a869cc05bbp1448fajsna77ddd7b5e76',
+    'X-RapidAPI-Host': 'timetable-lookup.p.rapidapi.com'
+  }
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
         });
     </script>
 </body>
