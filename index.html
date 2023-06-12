@@ -4,7 +4,7 @@
     <title>Timetable Lookup</title>
 </head>
 <body>
-    <form action="{{ url_for('display_timetable') }}" method="POST">
+    <form id="timetableForm" method="POST">
         <label for="origin">Origin:</label>
         <input type="text" name="origin" id="origin">
 
@@ -16,5 +16,18 @@
 
         <input type="submit" value="Go">
     </form>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('timetableForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Run the script.js code here
+            // ... (the modified script.js code goes here)
+
+            // Optionally, you can redirect or perform other actions after running the script
+            // window.location.href = 'somepage.html';
+        });
+    </script>
 </body>
 </html>
