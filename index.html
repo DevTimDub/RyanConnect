@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timetable Lookup</title>
+</head>
+<body>
+    <form action="{{ url_for('display_timetable') }}" method="POST">
+        <label for="origin">Origin:</label>
+        <input type="text" name="origin" id="origin">
+
+        <label for="destination">Destination:</label>
+        <input type="text" name="destination" id="destination">
+
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date">
+
+        <input type="submit" value="Go">
+    </form>
+</body>
+</html>
